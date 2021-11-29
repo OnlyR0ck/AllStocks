@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "D72B/Mofy5ns4QTZjG5Op+Ytwqj+pSfJbDCj8ks92nJJ/bsfuCwu64j4CADkU7WnCbMs1oqBYc2l36OX/MoLVA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\guita\\source\\repos\\AS.Server\\AllStocks\\AllStocks.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\guita\\.nuget\\packages\\dynamicdata\\7.4.3\\dynamicdata.7.4.3.nupkg.sha512",
+    "C:\\Users\\guita\\.nuget\\packages\\fody\\6.6.0\\fody.6.6.0.nupkg.sha512",
+    "C:\\Users\\guita\\.nuget\\packages\\microsoft.visualstudio.vsixcolorcompiler\\16.0.0\\microsoft.visualstudio.vsixcolorcompiler.16.0.0.nupkg.sha512",
+    "C:\\Users\\guita\\.nuget\\packages\\reactiveui\\16.3.10\\reactiveui.16.3.10.nupkg.sha512",
+    "C:\\Users\\guita\\.nuget\\packages\\reactiveui.fody\\16.3.10\\reactiveui.fody.16.3.10.nupkg.sha512",
+    "C:\\Users\\guita\\.nuget\\packages\\reactiveui.wpf\\16.3.10\\reactiveui.wpf.16.3.10.nupkg.sha512",
+    "C:\\Users\\guita\\.nuget\\packages\\splat\\13.1.42\\splat.13.1.42.nupkg.sha512",
+    "C:\\Users\\guita\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

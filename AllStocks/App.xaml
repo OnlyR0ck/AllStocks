@@ -1,0 +1,15 @@
+﻿<Application x:Class="AllStocks.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AllStocks"
+             xmlns:vm ="clr-namespace:AllStocks.ViewModels"
+             xmlns:view ="clr-namespace:AllStocks.Views"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         <ResourceDictionary>
+             <DataTemplate DataType="{x:Type vm:ServerParamsViewModel}">
+                <view:ServerParamsView/>
+            </DataTemplate>
+         </ResourceDictionary>
+    </Application.Resources>
+</Application>
