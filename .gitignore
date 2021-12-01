@@ -187,3 +187,5 @@ StyleCop.Cache
 bin
 obj
 *.v2
+
+.vs/AllStocks/v16/

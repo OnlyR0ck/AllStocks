@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Reactive.Disposables;
 using System.Runtime.InteropServices;
+using System.Windows;
+using System.Windows.Input;
 using System.Windows.Interop;
 using AllStocks.Client.ViewModels;
 using ReactiveUI;
@@ -71,6 +73,37 @@ namespace AllStocks.Client
             var attribute = DWMWINDOWATTRIBUTE.DWMWA_WINDOW_CORNER_PREFERENCE;
             var preference = DWM_WINDOW_CORNER_PREFERENCE.DWMWCP_ROUND;
             DwmSetWindowAttribute(hWnd, attribute, ref preference, sizeof(uint));
+        }
+
+        private void MaximizeButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.MainWindow == null)
+            {
+                return;
+            }
+            Application.Current.MainWindow.WindowState =
+                Application.Current.MainWindow.WindowState == WindowState.Maximized ?
+                    WindowState.Normal : WindowState.Maximized;
+        }
+
+        private void CloseButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown(0);
+        }
+
+        private void MinimizeButton_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (Application.Current.MainWindow == null)
+            {
+                return;
+            }
+
+            Application.Current.MainWindow.WindowState = WindowState.Minimized;
+        }
+
+        private void Boder_OnMouseButtonPressed(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }
