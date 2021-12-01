@@ -39,6 +39,24 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "ReactiveUI": {
+              "target": "Package",
+              "version": "[16.4.1, )"
+            },
+            "ReactiveUI.Events.WPF": {
+              "target": "Package",
+              "version": "[15.1.1, )"
+            },
+            "ReactiveUI.Fody": {
+              "target": "Package",
+              "version": "[16.4.1, )"
+            },
+            "ReactiveUI.WPF": {
+              "target": "Package",
+              "version": "[16.4.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

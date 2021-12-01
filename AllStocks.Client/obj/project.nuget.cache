@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "0g4fU96t3ttos1DSYLcH1pnDzl3AClF2j4Px8CpYJdGU3yH0GNYWWMnjMDBBtg1Hzx9JZVeUigZome9+ciEIlQ==",
+  "dgSpecHash": "ZD0mJUnp7camuNDkUuWx73pOw63ACRYWnSZyMir5NSdyT428pfaHVDAFQ8dieFy/mBg50KbezH81qbMWaP6yQQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\guita\\source\\repos\\AS.Server\\AllStocks.Client\\AllStocks.Client.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\guita\\.nuget\\packages\\dynamicdata\\7.4.3\\dynamicdata.7.4.3.nupkg.sha512",
+    "C:\\Users\\guita\\.nuget\\packages\\fody\\6.6.0\\fody.6.6.0.nupkg.sha512",
+    "C:\\Users\\guita\\.nuget\\packages\\pharmacist.common\\2.0.8\\pharmacist.common.2.0.8.nupkg.sha512",
+    "C:\\Users\\guita\\.nuget\\packages\\reactiveui\\16.4.1\\reactiveui.16.4.1.nupkg.sha512",
+    "C:\\Users\\guita\\.nuget\\packages\\reactiveui.events.wpf\\15.1.1\\reactiveui.events.wpf.15.1.1.nupkg.sha512",
+    "C:\\Users\\guita\\.nuget\\packages\\reactiveui.fody\\16.4.1\\reactiveui.fody.16.4.1.nupkg.sha512",
+    "C:\\Users\\guita\\.nuget\\packages\\reactiveui.wpf\\16.4.1\\reactiveui.wpf.16.4.1.nupkg.sha512",
+    "C:\\Users\\guita\\.nuget\\packages\\splat\\13.1.63\\splat.13.1.63.nupkg.sha512",
+    "C:\\Users\\guita\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

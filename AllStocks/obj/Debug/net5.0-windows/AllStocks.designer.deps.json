@@ -19,46 +19,46 @@
       },
       "Fody/6.6.0": {},
       "Microsoft.VisualStudio.VsixColorCompiler/16.0.0": {},
-      "ReactiveUI/16.3.10": {
+      "ReactiveUI/16.4.1": {
         "dependencies": {
           "DynamicData": "7.4.3",
-          "Splat": "13.1.42"
+          "Splat": "13.1.63"
         },
         "runtime": {
           "lib/net5.0/ReactiveUI.dll": {
-            "assemblyVersion": "16.3.0.0",
-            "fileVersion": "16.3.10.38540"
+            "assemblyVersion": "16.4.0.0",
+            "fileVersion": "16.4.1.14555"
           }
         }
       },
-      "ReactiveUI.Fody/16.3.10": {
+      "ReactiveUI.Fody/16.4.1": {
         "dependencies": {
           "Fody": "6.6.0",
-          "ReactiveUI": "16.3.10"
+          "ReactiveUI": "16.4.1"
         },
         "runtime": {
           "lib/net5.0/ReactiveUI.Fody.Helpers.dll": {
-            "assemblyVersion": "16.3.0.0",
-            "fileVersion": "16.3.10.38540"
+            "assemblyVersion": "16.4.0.0",
+            "fileVersion": "16.4.1.14555"
           }
         }
       },
-      "ReactiveUI.WPF/16.3.10": {
+      "ReactiveUI.WPF/16.4.1": {
         "dependencies": {
-          "ReactiveUI": "16.3.10"
+          "ReactiveUI": "16.4.1"
         },
         "runtime": {
           "lib/net5.0-windows7.0/ReactiveUI.Wpf.dll": {
-            "assemblyVersion": "16.3.0.0",
-            "fileVersion": "16.3.10.38540"
+            "assemblyVersion": "16.4.0.0",
+            "fileVersion": "16.4.1.14555"
           }
         }
       },
-      "Splat/13.1.42": {
+      "Splat/13.1.63": {
         "runtime": {
           "lib/net5.0/Splat.dll": {
             "assemblyVersion": "13.1.0.0",
-            "fileVersion": "13.1.42.61178"
+            "fileVersion": "13.1.63.25476"
           }
         }
       },
@@ -94,33 +94,33 @@
       "path": "microsoft.visualstudio.vsixcolorcompiler/16.0.0",
       "hashPath": "microsoft.visualstudio.vsixcolorcompiler.16.0.0.nupkg.sha512"
     },
-    "ReactiveUI/16.3.10": {
+    "ReactiveUI/16.4.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-NH9bg8BROqRrTp6YLpPDsJrfNDzRWNmP63fQ68CBAM+i7YHi6wcPeOkxyKpoemUxKEY4QECuicaTblJnxgbWmA==",
-      "path": "reactiveui/16.3.10",
-      "hashPath": "reactiveui.16.3.10.nupkg.sha512"
+      "sha512": "sha512-g8zOSoE76UZMCd09G8StudiELQyNpMxniUodBaL8IMGK3tuuIywQF0qrsjAIeguX74wTopz7tQATedsp4i3pFQ==",
+      "path": "reactiveui/16.4.1",
+      "hashPath": "reactiveui.16.4.1.nupkg.sha512"
     },
-    "ReactiveUI.Fody/16.3.10": {
+    "ReactiveUI.Fody/16.4.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-IINk0ma/SAQdNRk/H0/DutsgRbcYCrJ7/B0jtYuqfueW752tRuTNgO0sN+eTNuC9d5fzfqu53zqN5T7DtEemNA==",
-      "path": "reactiveui.fody/16.3.10",
-      "hashPath": "reactiveui.fody.16.3.10.nupkg.sha512"
+      "sha512": "sha512-dbYiOr1mXDQcCXcdc4DvW/kMX8pbJ0gIxgyNDovCZk/VsWqY97J/UqOeWpkA8fyeBat2GM94Ox+wM866qSq2Zg==",
+      "path": "reactiveui.fody/16.4.1",
+      "hashPath": "reactiveui.fody.16.4.1.nupkg.sha512"
     },
-    "ReactiveUI.WPF/16.3.10": {
+    "ReactiveUI.WPF/16.4.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0O003zWScTLKzkK6wT135ZPWcQo4Fx3VNNFlshneeC+X2y5PIb26onpfjz7JdbaC4JzWty3yW5MEYSNELtd7/w==",
-      "path": "reactiveui.wpf/16.3.10",
-      "hashPath": "reactiveui.wpf.16.3.10.nupkg.sha512"
+      "sha512": "sha512-qpftspp31R94AjkeLxMdW+XjLcp2T5+fbClC+tAk3ahiTPIM1gydSUcK2q/B39yPMAmdVt5Z7KtoF2pdxRWzdA==",
+      "path": "reactiveui.wpf/16.4.1",
+      "hashPath": "reactiveui.wpf.16.4.1.nupkg.sha512"
     },
-    "Splat/13.1.42": {
+    "Splat/13.1.63": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-a/NkGyoSsmvH2YZGgjFxt0dsXkRTgQRMgoUDN8WpBhTUr3wnPTdeQTOLLr2Jc/BCAdOA7cK2+E4Io8I1/q3f3Q==",
-      "path": "splat/13.1.42",
-      "hashPath": "splat.13.1.42.nupkg.sha512"
+      "sha512": "sha512-7iW45RA7AbSlQPCgdokmysva5PGd6iBUhuNkC0XD73LF9dxfTkKeo3wZkohU7nvspDhJ7PJsYHvDtxIt5bMQ8Q==",
+      "path": "splat/13.1.63",
+      "hashPath": "splat.13.1.63.nupkg.sha512"
     },
     "System.Reactive/5.0.0": {
       "type": "package",

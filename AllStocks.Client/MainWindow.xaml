@@ -1,12 +1,186 @@
-﻿<Window x:Class="AllStocks.Client.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AllStocks.Client"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+﻿<rxui:ReactiveWindow x:Class="AllStocks.Client.MainWindow"
+                     x:TypeArguments="vms:MainViewModel"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:local="clr-namespace:AllStocks.Client"
+                     xmlns:rxui="http://reactiveui.net"
+                     xmlns:vms ="clr-namespace:AllStocks.Client.ViewModels"
+                     mc:Ignorable="d"
+                     Title="MainWindow" Height="450" Width="800"
+                     WindowState="Normal"
+                     WindowStartupLocation="CenterScreen"
+                     WindowStyle="None"
+                     ResizeMode="CanResizeWithGrip"
+                     ShowInTaskbar="True"
+                     AllowsTransparency="True">
+    <Window.DataContext>
+        <vms:MainViewModel/>
+    </Window.DataContext>
 
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0">
+
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Aquamarine" Offset="0.83"/>
+                    <GradientStop Color="#FF65C4A4" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <Grid 
+                HorizontalAlignment="Stretch">
+
+                <Label 
+                    Content="AllStocks Client"
+                    Foreground="DimGray"
+                    Margin="10,0,0,0"
+                    FontStyle="Normal" FontFamily="Segoe UI Light"
+                />
+
+                <StackPanel 
+                    HorizontalAlignment="Right" 
+                    Orientation="Horizontal">
+
+                    <Button 
+                        x:Name="MinimizeButton"
+                        Width="20"
+                        Height="20"
+                        VerticalAlignment="Center"
+                        Content="_"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        FontWeight="Bold"
+
+                    />
+
+                    <Button 
+                        x:Name="MaximizeButton"
+                        Width="20"
+                        Height="20"
+                        Content="□"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        FontWeight="Bold"
+                        VerticalAlignment="Center"
+                    />
+
+                    <Button 
+                        x:Name="CloseButton"
+                        Width="20"
+                        Height="20"
+                        VerticalAlignment="Center"
+                        Content="⨉"
+                        Background="Transparent"
+                        Foreground="#000000"
+                        BorderThickness="0"
+                        FontWeight="Normal"
+                    />
+                </StackPanel>
+
+            </Grid>
+
+        </Border>
+
+        <Grid 
+            Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0"
+                     Width="auto">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                        <GradientStop Color="#FF9FF1DA" Offset="1"/>
+                        <GradientStop Color="#FFB9FBE9" Offset="0"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+
+                <Border Background="#FF49A78D"
+                        CornerRadius="0,10,10,0">
+                <Button 
+                    x:Name="ButtonCompanyInfo"
+                    VerticalAlignment="Center"
+                    Content="Company Info"
+                    Background="Transparent"
+                    Foreground="#000000"
+                    BorderThickness="0"
+                    FontWeight="Normal"
+                    Margin="5,6,5,6">
+                </Button>
+                    </Border>
+
+                <Border Background="#FF49A78D"
+                        CornerRadius="0,10,10,0">
+                    <Button 
+                    x:Name="ButtonTicketPrice"
+                    VerticalAlignment="Center"
+                    Content="Company Info"
+                    Background="Transparent"
+                    Foreground="#000000"
+                    BorderThickness="0"
+                    FontWeight="Normal"
+                    Margin="5,6,5,6"
+                    />
+                </Border>
+
+                <Border Background="#FF49A78D"
+                        CornerRadius="0,10,10,0">
+                <Button 
+                    x:Name="ButtonTicketPriceFromTo"
+                    VerticalAlignment="Center"
+                    Content="Ranged Ticket Price"
+                    Background="Transparent"
+                    Foreground="#000000"
+                    BorderThickness="0"
+                    FontWeight="Normal"
+                    Margin="5,6,5,6"
+                />
+                </Border>
+
+                <Border Background="#FF49A78D"
+                        CornerRadius="0,10,10,0">
+                <Button 
+                    x:Name="ButtonTodayTicket"
+                    VerticalAlignment="Center"
+                    Content="Ranged Ticket Price"
+                    Background="Transparent"
+                    Foreground="#000000"
+                    BorderThickness="0"
+                    FontWeight="Normal"
+                    Margin="5,6,5,6"
+                />
+                </Border>
+            </StackPanel>
+
+            <Grid Grid.Column ="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <rxui:RoutedViewHost
+                    Grid.Row="1"
+                    x:Name="RoutedViewHost">
+                    <rxui:RoutedViewHost.DefaultContent>
+                        <TextBlock
+                            FontSize="100"
+                            Text="Fuck WPF"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+                    </rxui:RoutedViewHost.DefaultContent>
+                </rxui:RoutedViewHost>
+
+            </Grid>
+
+        </Grid>
     </Grid>
-</Window>
+</rxui:ReactiveWindow>

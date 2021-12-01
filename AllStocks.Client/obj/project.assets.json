@@ -1,11 +1,390 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {}
+    "net5.0-windows7.0": {
+      "DynamicData/7.4.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/DynamicData.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/DynamicData.dll": {}
+        }
+      },
+      "Fody/6.6.0": {
+        "type": "package",
+        "build": {
+          "build/Fody.targets": {}
+        }
+      },
+      "Pharmacist.Common/2.0.8": {
+        "type": "package",
+        "dependencies": {
+          "System.Reactive": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0/Pharmacist.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Pharmacist.Common.dll": {}
+        }
+      },
+      "ReactiveUI/16.4.1": {
+        "type": "package",
+        "dependencies": {
+          "DynamicData": "7.4.3",
+          "Splat": "13.1.63"
+        },
+        "compile": {
+          "lib/net5.0/ReactiveUI.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/ReactiveUI.dll": {}
+        }
+      },
+      "ReactiveUI.Events.WPF/15.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Pharmacist.Common": "2.0.8",
+          "System.Reactive": "5.0.0"
+        },
+        "compile": {
+          "lib/net5.0-windows7.0/ReactiveUI.Events.WPF.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/ReactiveUI.Events.WPF.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App"
+        ]
+      },
+      "ReactiveUI.Fody/16.4.1": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "6.6.0",
+          "ReactiveUI": "16.4.1"
+        },
+        "compile": {
+          "lib/net5.0/ReactiveUI.Fody.Helpers.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/ReactiveUI.Fody.Helpers.dll": {}
+        },
+        "build": {
+          "build/ReactiveUI.Fody.props": {}
+        }
+      },
+      "ReactiveUI.WPF/16.4.1": {
+        "type": "package",
+        "dependencies": {
+          "ReactiveUI": "16.4.1"
+        },
+        "compile": {
+          "lib/net5.0-windows7.0/ReactiveUI.Wpf.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0-windows7.0/ReactiveUI.Wpf.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
+      "Splat/13.1.63": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Splat.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Splat.dll": {}
+        }
+      },
+      "System.Reactive/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/System.Reactive.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/System.Reactive.dll": {}
+        },
+        "build": {
+          "buildTransitive/net5.0/_._": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "DynamicData/7.4.3": {
+      "sha512": "7eGyREbtzyaRutMa+iToi2e41JboEVK9c1ZBcTvJOfEoTRIZX3hChIsxIvV0ErzMXtGHAIS2O0I8jLDUIds5wg==",
+      "type": "package",
+      "path": "dynamicdata/7.4.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "dynamicdata.7.4.3.nupkg.sha512",
+        "dynamicdata.nuspec",
+        "lib/net461/DynamicData.dll",
+        "lib/net461/DynamicData.xml",
+        "lib/net5.0/DynamicData.dll",
+        "lib/net5.0/DynamicData.xml",
+        "lib/net6.0/DynamicData.dll",
+        "lib/net6.0/DynamicData.xml",
+        "lib/netstandard2.0/DynamicData.dll",
+        "lib/netstandard2.0/DynamicData.xml",
+        "lib/uap10.0.16299/DynamicData.dll",
+        "lib/uap10.0.16299/DynamicData.pri",
+        "lib/uap10.0.16299/DynamicData.xml",
+        "logo.png"
+      ]
+    },
+    "Fody/6.6.0": {
+      "sha512": "NWWM8KiR9DGiAi47q9px9oI27xYBiM5KXxSnI4R5mz2/rG8LIcXJfw5zDLLH1xOgzqRNJgc8KTPQPoiQCidYUw==",
+      "type": "package",
+      "path": "fody/6.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "build/Fody.targets",
+        "fody.6.6.0.nupkg.sha512",
+        "fody.nuspec",
+        "netclassictask/Fody.dll",
+        "netclassictask/FodyCommon.dll",
+        "netclassictask/FodyHelpers.dll",
+        "netclassictask/FodyIsolated.dll",
+        "netclassictask/Mono.Cecil.Pdb.dll",
+        "netclassictask/Mono.Cecil.Pdb.pdb",
+        "netclassictask/Mono.Cecil.Rocks.dll",
+        "netclassictask/Mono.Cecil.Rocks.pdb",
+        "netclassictask/Mono.Cecil.dll",
+        "netclassictask/Mono.Cecil.pdb",
+        "netstandardtask/Fody.dll",
+        "netstandardtask/FodyCommon.dll",
+        "netstandardtask/FodyHelpers.dll",
+        "netstandardtask/FodyIsolated.dll",
+        "netstandardtask/Mono.Cecil.Pdb.dll",
+        "netstandardtask/Mono.Cecil.Pdb.pdb",
+        "netstandardtask/Mono.Cecil.Rocks.dll",
+        "netstandardtask/Mono.Cecil.Rocks.pdb",
+        "netstandardtask/Mono.Cecil.dll",
+        "netstandardtask/Mono.Cecil.pdb"
+      ]
+    },
+    "Pharmacist.Common/2.0.8": {
+      "sha512": "NNiYvv2oTd18ckJMBt8zatCBPj0KwbzbxMuxgu45m20VtqvkvR6AborbOhkhmJC70iaSv3uLvhTnFExIJGDnQA==",
+      "type": "package",
+      "path": "pharmacist.common/2.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "lib/net472/Pharmacist.Common.dll",
+        "lib/net472/Pharmacist.Common.xml",
+        "lib/net5.0/Pharmacist.Common.dll",
+        "lib/net5.0/Pharmacist.Common.xml",
+        "lib/netstandard2.0/Pharmacist.Common.dll",
+        "lib/netstandard2.0/Pharmacist.Common.xml",
+        "pharmacist.common.2.0.8.nupkg.sha512",
+        "pharmacist.common.nuspec"
+      ]
+    },
+    "ReactiveUI/16.4.1": {
+      "sha512": "g8zOSoE76UZMCd09G8StudiELQyNpMxniUodBaL8IMGK3tuuIywQF0qrsjAIeguX74wTopz7tQATedsp4i3pFQ==",
+      "type": "package",
+      "path": "reactiveui/16.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "lib/monoandroid11.0/ReactiveUI.dll",
+        "lib/monoandroid11.0/ReactiveUI.pdb",
+        "lib/monoandroid11.0/ReactiveUI.xml",
+        "lib/net461/ReactiveUI.dll",
+        "lib/net461/ReactiveUI.xml",
+        "lib/net472/ReactiveUI.dll",
+        "lib/net472/ReactiveUI.xml",
+        "lib/net5.0/ReactiveUI.dll",
+        "lib/net5.0/ReactiveUI.xml",
+        "lib/net6.0-android31.0/ReactiveUI.dll",
+        "lib/net6.0-android31.0/ReactiveUI.xml",
+        "lib/net6.0-ios15.0/ReactiveUI.dll",
+        "lib/net6.0-ios15.0/ReactiveUI.xml",
+        "lib/net6.0-macos12.0/ReactiveUI.dll",
+        "lib/net6.0-macos12.0/ReactiveUI.xml",
+        "lib/net6.0-tvos15.0/ReactiveUI.dll",
+        "lib/net6.0-tvos15.0/ReactiveUI.xml",
+        "lib/net6.0/ReactiveUI.dll",
+        "lib/net6.0/ReactiveUI.xml",
+        "lib/netcoreapp3.1/ReactiveUI.dll",
+        "lib/netcoreapp3.1/ReactiveUI.xml",
+        "lib/netstandard2.0/ReactiveUI.dll",
+        "lib/netstandard2.0/ReactiveUI.xml",
+        "lib/tizen40/ReactiveUI.dll",
+        "lib/tizen40/ReactiveUI.xml",
+        "lib/uap10.0.16299/ReactiveUI.dll",
+        "lib/uap10.0.16299/ReactiveUI.pri",
+        "lib/uap10.0.16299/ReactiveUI.xml",
+        "lib/xamarinios10/ReactiveUI.dll",
+        "lib/xamarinios10/ReactiveUI.xml",
+        "lib/xamarinmac20/ReactiveUI.dll",
+        "lib/xamarinmac20/ReactiveUI.xml",
+        "lib/xamarintvos10/ReactiveUI.dll",
+        "lib/xamarintvos10/ReactiveUI.xml",
+        "logo.png",
+        "reactiveui.16.4.1.nupkg.sha512",
+        "reactiveui.nuspec"
+      ]
+    },
+    "ReactiveUI.Events.WPF/15.1.1": {
+      "sha512": "s6/QDkSZnQmMxvZ/sKHMJSeDY5yZOGPY64Ezl1h5kclj6l/v7hRRbnWIpEFD60+thsTQVGJIilNxnQ5n2oBmoA==",
+      "type": "package",
+      "path": "reactiveui.events.wpf/15.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "lib/net461/ReactiveUI.Events.WPF.dll",
+        "lib/net461/ReactiveUI.Events.WPF.xml",
+        "lib/net462/ReactiveUI.Events.WPF.dll",
+        "lib/net462/ReactiveUI.Events.WPF.xml",
+        "lib/net47/ReactiveUI.Events.WPF.dll",
+        "lib/net47/ReactiveUI.Events.WPF.xml",
+        "lib/net471/ReactiveUI.Events.WPF.dll",
+        "lib/net471/ReactiveUI.Events.WPF.xml",
+        "lib/net472/ReactiveUI.Events.WPF.dll",
+        "lib/net472/ReactiveUI.Events.WPF.xml",
+        "lib/net48/ReactiveUI.Events.WPF.dll",
+        "lib/net48/ReactiveUI.Events.WPF.xml",
+        "lib/net5.0-windows10.0.19041/ReactiveUI.Events.WPF.dll",
+        "lib/net5.0-windows10.0.19041/ReactiveUI.Events.WPF.xml",
+        "lib/net5.0-windows7.0/ReactiveUI.Events.WPF.dll",
+        "lib/net5.0-windows7.0/ReactiveUI.Events.WPF.xml",
+        "lib/netcoreapp3.1/ReactiveUI.Events.WPF.dll",
+        "lib/netcoreapp3.1/ReactiveUI.Events.WPF.xml",
+        "reactiveui.events.wpf.15.1.1.nupkg.sha512",
+        "reactiveui.events.wpf.nuspec"
+      ]
+    },
+    "ReactiveUI.Fody/16.4.1": {
+      "sha512": "dbYiOr1mXDQcCXcdc4DvW/kMX8pbJ0gIxgyNDovCZk/VsWqY97J/UqOeWpkA8fyeBat2GM94Ox+wM866qSq2Zg==",
+      "type": "package",
+      "path": "reactiveui.fody/16.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "build/ReactiveUI.Fody.props",
+        "lib/monoandroid11.0/ReactiveUI.Fody.Helpers.dll",
+        "lib/monoandroid11.0/ReactiveUI.Fody.Helpers.pdb",
+        "lib/monoandroid11.0/ReactiveUI.Fody.Helpers.xml",
+        "lib/net472/ReactiveUI.Fody.Helpers.dll",
+        "lib/net472/ReactiveUI.Fody.Helpers.xml",
+        "lib/net5.0/ReactiveUI.Fody.Helpers.dll",
+        "lib/net5.0/ReactiveUI.Fody.Helpers.xml",
+        "lib/netstandard2.0/ReactiveUI.Fody.Helpers.dll",
+        "lib/netstandard2.0/ReactiveUI.Fody.Helpers.xml",
+        "lib/uap10.0.16299/ReactiveUI.Fody.Helpers.dll",
+        "lib/uap10.0.16299/ReactiveUI.Fody.Helpers.pri",
+        "lib/uap10.0.16299/ReactiveUI.Fody.Helpers.xml",
+        "lib/xamarinios10/ReactiveUI.Fody.Helpers.dll",
+        "lib/xamarinios10/ReactiveUI.Fody.Helpers.xml",
+        "lib/xamarinmac20/ReactiveUI.Fody.Helpers.dll",
+        "lib/xamarinmac20/ReactiveUI.Fody.Helpers.xml",
+        "lib/xamarintvos10/ReactiveUI.Fody.Helpers.dll",
+        "lib/xamarintvos10/ReactiveUI.Fody.Helpers.xml",
+        "logo.png",
+        "reactiveui.fody.16.4.1.nupkg.sha512",
+        "reactiveui.fody.nuspec",
+        "weaver/ReactiveUI.Fody.dll"
+      ]
+    },
+    "ReactiveUI.WPF/16.4.1": {
+      "sha512": "qpftspp31R94AjkeLxMdW+XjLcp2T5+fbClC+tAk3ahiTPIM1gydSUcK2q/B39yPMAmdVt5Z7KtoF2pdxRWzdA==",
+      "type": "package",
+      "path": "reactiveui.wpf/16.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "lib/net461/ReactiveUI.Wpf.dll",
+        "lib/net461/ReactiveUI.Wpf.xml",
+        "lib/net472/ReactiveUI.Wpf.dll",
+        "lib/net472/ReactiveUI.Wpf.xml",
+        "lib/net48/ReactiveUI.Wpf.dll",
+        "lib/net48/ReactiveUI.Wpf.xml",
+        "lib/net5.0-windows10.0.19041/ReactiveUI.Wpf.dll",
+        "lib/net5.0-windows10.0.19041/ReactiveUI.Wpf.xml",
+        "lib/net5.0-windows7.0/ReactiveUI.Wpf.dll",
+        "lib/net5.0-windows7.0/ReactiveUI.Wpf.xml",
+        "lib/net6.0-windows10.0.19041/ReactiveUI.Wpf.dll",
+        "lib/net6.0-windows10.0.19041/ReactiveUI.Wpf.xml",
+        "lib/net6.0-windows7.0/ReactiveUI.Wpf.dll",
+        "lib/net6.0-windows7.0/ReactiveUI.Wpf.xml",
+        "lib/netcoreapp3.1/ReactiveUI.Wpf.dll",
+        "lib/netcoreapp3.1/ReactiveUI.Wpf.xml",
+        "logo.png",
+        "reactiveui.wpf.16.4.1.nupkg.sha512",
+        "reactiveui.wpf.nuspec"
+      ]
+    },
+    "Splat/13.1.63": {
+      "sha512": "7iW45RA7AbSlQPCgdokmysva5PGd6iBUhuNkC0XD73LF9dxfTkKeo3wZkohU7nvspDhJ7PJsYHvDtxIt5bMQ8Q==",
+      "type": "package",
+      "path": "splat/13.1.63",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "lib/net5.0/Splat.dll",
+        "lib/net5.0/Splat.xml",
+        "lib/net6.0/Splat.dll",
+        "lib/net6.0/Splat.xml",
+        "lib/netstandard2.0/Splat.dll",
+        "lib/netstandard2.0/Splat.xml",
+        "splat.13.1.63.nupkg.sha512",
+        "splat.nuspec"
+      ]
+    },
+    "System.Reactive/5.0.0": {
+      "sha512": "erBZjkQHWL9jpasCE/0qKAryzVBJFxGHVBAvgRN1bzM0q2s1S4oYREEEL0Vb+1kA/6BKb5FjUZMp5VXmy+gzkQ==",
+      "type": "package",
+      "path": "system.reactive/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net5.0/_._",
+        "build/netcoreapp3.1/System.Reactive.dll",
+        "build/netcoreapp3.1/System.Reactive.targets",
+        "build/netcoreapp3.1/System.Reactive.xml",
+        "buildTransitive/net5.0/_._",
+        "buildTransitive/netcoreapp3.1/System.Reactive.targets",
+        "lib/net472/System.Reactive.dll",
+        "lib/net472/System.Reactive.xml",
+        "lib/net5.0-windows10.0.19041/System.Reactive.dll",
+        "lib/net5.0-windows10.0.19041/System.Reactive.xml",
+        "lib/net5.0/System.Reactive.dll",
+        "lib/net5.0/System.Reactive.xml",
+        "lib/netcoreapp3.1/_._",
+        "lib/netstandard2.0/System.Reactive.dll",
+        "lib/netstandard2.0/System.Reactive.xml",
+        "lib/uap10.0.16299/System.Reactive.dll",
+        "lib/uap10.0.16299/System.Reactive.pri",
+        "lib/uap10.0.16299/System.Reactive.xml",
+        "system.reactive.5.0.0.nupkg.sha512",
+        "system.reactive.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": []
+    "net5.0-windows7.0": [
+      "ReactiveUI >= 16.4.1",
+      "ReactiveUI.Events.WPF >= 15.1.1",
+      "ReactiveUI.Fody >= 16.4.1",
+      "ReactiveUI.WPF >= 16.4.1"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\guita\\.nuget\\packages\\": {}
@@ -45,6 +424,24 @@
     "frameworks": {
       "net5.0-windows7.0": {
         "targetAlias": "net5.0-windows",
+        "dependencies": {
+          "ReactiveUI": {
+            "target": "Package",
+            "version": "[16.4.1, )"
+          },
+          "ReactiveUI.Events.WPF": {
+            "target": "Package",
+            "version": "[15.1.1, )"
+          },
+          "ReactiveUI.Fody": {
+            "target": "Package",
+            "version": "[16.4.1, )"
+          },
+          "ReactiveUI.WPF": {
+            "target": "Package",
+            "version": "[16.4.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
