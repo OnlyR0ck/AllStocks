@@ -26,11 +26,11 @@
           "build/Microsoft.VisualStudio.VsixColorCompiler.targets": {}
         }
       },
-      "ReactiveUI/16.3.10": {
+      "ReactiveUI/16.4.1": {
         "type": "package",
         "dependencies": {
           "DynamicData": "7.4.3",
-          "Splat": "13.1.42"
+          "Splat": "13.1.63"
         },
         "compile": {
           "lib/net5.0/ReactiveUI.dll": {}
@@ -39,11 +39,11 @@
           "lib/net5.0/ReactiveUI.dll": {}
         }
       },
-      "ReactiveUI.Fody/16.3.10": {
+      "ReactiveUI.Fody/16.4.1": {
         "type": "package",
         "dependencies": {
           "Fody": "6.6.0",
-          "ReactiveUI": "16.3.10"
+          "ReactiveUI": "16.4.1"
         },
         "compile": {
           "lib/net5.0/ReactiveUI.Fody.Helpers.dll": {}
@@ -55,10 +55,10 @@
           "build/ReactiveUI.Fody.props": {}
         }
       },
-      "ReactiveUI.WPF/16.3.10": {
+      "ReactiveUI.WPF/16.4.1": {
         "type": "package",
         "dependencies": {
-          "ReactiveUI": "16.3.10"
+          "ReactiveUI": "16.4.1"
         },
         "compile": {
           "lib/net5.0-windows7.0/ReactiveUI.Wpf.dll": {}
@@ -70,7 +70,7 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "Splat/13.1.42": {
+      "Splat/13.1.63": {
         "type": "package",
         "compile": {
           "lib/net5.0/Splat.dll": {}
@@ -166,10 +166,10 @@
         "microsoft.visualstudio.vsixcolorcompiler.nuspec"
       ]
     },
-    "ReactiveUI/16.3.10": {
-      "sha512": "NH9bg8BROqRrTp6YLpPDsJrfNDzRWNmP63fQ68CBAM+i7YHi6wcPeOkxyKpoemUxKEY4QECuicaTblJnxgbWmA==",
+    "ReactiveUI/16.4.1": {
+      "sha512": "g8zOSoE76UZMCd09G8StudiELQyNpMxniUodBaL8IMGK3tuuIywQF0qrsjAIeguX74wTopz7tQATedsp4i3pFQ==",
       "type": "package",
-      "path": "reactiveui/16.3.10",
+      "path": "reactiveui/16.4.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -209,14 +209,14 @@
         "lib/xamarintvos10/ReactiveUI.dll",
         "lib/xamarintvos10/ReactiveUI.xml",
         "logo.png",
-        "reactiveui.16.3.10.nupkg.sha512",
+        "reactiveui.16.4.1.nupkg.sha512",
         "reactiveui.nuspec"
       ]
     },
-    "ReactiveUI.Fody/16.3.10": {
-      "sha512": "IINk0ma/SAQdNRk/H0/DutsgRbcYCrJ7/B0jtYuqfueW752tRuTNgO0sN+eTNuC9d5fzfqu53zqN5T7DtEemNA==",
+    "ReactiveUI.Fody/16.4.1": {
+      "sha512": "dbYiOr1mXDQcCXcdc4DvW/kMX8pbJ0gIxgyNDovCZk/VsWqY97J/UqOeWpkA8fyeBat2GM94Ox+wM866qSq2Zg==",
       "type": "package",
-      "path": "reactiveui.fody/16.3.10",
+      "path": "reactiveui.fody/16.4.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -241,15 +241,15 @@
         "lib/xamarintvos10/ReactiveUI.Fody.Helpers.dll",
         "lib/xamarintvos10/ReactiveUI.Fody.Helpers.xml",
         "logo.png",
-        "reactiveui.fody.16.3.10.nupkg.sha512",
+        "reactiveui.fody.16.4.1.nupkg.sha512",
         "reactiveui.fody.nuspec",
         "weaver/ReactiveUI.Fody.dll"
       ]
     },
-    "ReactiveUI.WPF/16.3.10": {
-      "sha512": "0O003zWScTLKzkK6wT135ZPWcQo4Fx3VNNFlshneeC+X2y5PIb26onpfjz7JdbaC4JzWty3yW5MEYSNELtd7/w==",
+    "ReactiveUI.WPF/16.4.1": {
+      "sha512": "qpftspp31R94AjkeLxMdW+XjLcp2T5+fbClC+tAk3ahiTPIM1gydSUcK2q/B39yPMAmdVt5Z7KtoF2pdxRWzdA==",
       "type": "package",
-      "path": "reactiveui.wpf/16.3.10",
+      "path": "reactiveui.wpf/16.4.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -271,14 +271,14 @@
         "lib/netcoreapp3.1/ReactiveUI.Wpf.dll",
         "lib/netcoreapp3.1/ReactiveUI.Wpf.xml",
         "logo.png",
-        "reactiveui.wpf.16.3.10.nupkg.sha512",
+        "reactiveui.wpf.16.4.1.nupkg.sha512",
         "reactiveui.wpf.nuspec"
       ]
     },
-    "Splat/13.1.42": {
-      "sha512": "a/NkGyoSsmvH2YZGgjFxt0dsXkRTgQRMgoUDN8WpBhTUr3wnPTdeQTOLLr2Jc/BCAdOA7cK2+E4Io8I1/q3f3Q==",
+    "Splat/13.1.63": {
+      "sha512": "7iW45RA7AbSlQPCgdokmysva5PGd6iBUhuNkC0XD73LF9dxfTkKeo3wZkohU7nvspDhJ7PJsYHvDtxIt5bMQ8Q==",
       "type": "package",
-      "path": "splat/13.1.42",
+      "path": "splat/13.1.63",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -289,7 +289,7 @@
         "lib/net6.0/Splat.xml",
         "lib/netstandard2.0/Splat.dll",
         "lib/netstandard2.0/Splat.xml",
-        "splat.13.1.42.nupkg.sha512",
+        "splat.13.1.63.nupkg.sha512",
         "splat.nuspec"
       ]
     },
@@ -326,9 +326,9 @@
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
       "Microsoft.VisualStudio.VsixColorCompiler >= 16.0.0",
-      "ReactiveUI >= 16.3.10",
-      "ReactiveUI.Fody >= 16.3.10",
-      "ReactiveUI.WPF >= 16.3.10"
+      "ReactiveUI >= 16.4.1",
+      "ReactiveUI.Fody >= 16.4.1",
+      "ReactiveUI.WPF >= 16.4.1"
     ]
   },
   "packageFolders": {
@@ -376,15 +376,15 @@
           },
           "ReactiveUI": {
             "target": "Package",
-            "version": "[16.3.10, )"
+            "version": "[16.4.1, )"
           },
           "ReactiveUI.Fody": {
             "target": "Package",
-            "version": "[16.3.10, )"
+            "version": "[16.4.1, )"
           },
           "ReactiveUI.WPF": {
             "target": "Package",
-            "version": "[16.3.10, )"
+            "version": "[16.4.1, )"
           }
         },
         "imports": [

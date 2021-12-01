@@ -16,6 +16,6 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)reactiveui.fody\16.3.10\build\ReactiveUI.Fody.props" Condition="Exists('$(NuGetPackageRoot)reactiveui.fody\16.3.10\build\ReactiveUI.Fody.props')" />
+    <Import Project="$(NuGetPackageRoot)reactiveui.fody\16.4.1\build\ReactiveUI.Fody.props" Condition="Exists('$(NuGetPackageRoot)reactiveui.fody\16.4.1\build\ReactiveUI.Fody.props')" />
   </ImportGroup>
 </Project>

@@ -46,15 +46,15 @@
             },
             "ReactiveUI": {
               "target": "Package",
-              "version": "[16.3.10, )"
+              "version": "[16.4.1, )"
             },
             "ReactiveUI.Fody": {
               "target": "Package",
-              "version": "[16.3.10, )"
+              "version": "[16.4.1, )"
             },
             "ReactiveUI.WPF": {
               "target": "Package",
-              "version": "[16.3.10, )"
+              "version": "[16.4.1, )"
             }
           },
           "imports": [
