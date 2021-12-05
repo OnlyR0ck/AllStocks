@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AllStocks.Client.Models
+﻿namespace AllStocks.Client.Models
 {
-    class CompanyDataModel
+    public class CompanyDataModel
     {
         public CompanyData[] Data { get; set; }
 
@@ -48,8 +42,6 @@ namespace AllStocks.Client.Models
             public float epsdiluted { get; set; }
             public long weightedAverageShsOut { get; set; }
             public long weightedAverageShsOutDil { get; set; }
-            public string link { get; set; }
-            public string finalLink { get; set; }
         }
 
 

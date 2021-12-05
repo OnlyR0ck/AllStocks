@@ -48,9 +48,6 @@ namespace AllStocks
             InitializeComponent();
             SetRoundCorners();
 
-            ViewModel = new MainViewModel();
-
-
             this.WhenActivated(disposables =>
             {
                 this.OneWayBind( ViewModel, mvm => mvm.Router, vm => vm.RoutedViewHost.Router)

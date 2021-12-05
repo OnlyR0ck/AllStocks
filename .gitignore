@@ -189,3 +189,5 @@ obj
 *.v2
 
 .vs/AllStocks/v16/
+
+.vs/AllStocks/DesignTimeBuild/

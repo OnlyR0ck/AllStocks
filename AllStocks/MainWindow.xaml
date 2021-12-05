@@ -104,7 +104,7 @@
                 <rxui:RoutedViewHost.DefaultContent>
                     <TextBlock
                         FontSize="100"
-                        Text="Fuck WPF"
+                        Text="I Love WPF (NO)"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"/>
                 </rxui:RoutedViewHost.DefaultContent>

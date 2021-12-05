@@ -29,7 +29,7 @@ namespace AllStocks.Classes
 
 
 
-        public async Task<List<string>> GetCompanyInfo(int years)
+        public async Task<List<string>> GetCompanyInfo(int years = 1)
         {
             List<string> responseList = new List<string>();
             using (HttpClient httpClient = new HttpClient())
@@ -66,7 +66,6 @@ namespace AllStocks.Classes
 
             List<string> responseList = new List<string>();
             using (HttpClient httpClient = new HttpClient())
-
             {
                 using (HttpRequestMessage request = new HttpRequestMessage(new HttpMethod("GET"),
                     $"https://financialmodelingprep.com/api/v3/search-ticker?query={query}&limit={limit}&exchange={exchange}&apikey={ApiKey}"))
@@ -127,7 +126,7 @@ namespace AllStocks.Classes
             return responseList;
         }
 
-        public async Task<List<string>> GetStockPriceToday(string from, string to)
+        public async Task<List<string>> GetStockPriceToday()
         {
             string date = $"{DateTime.Today:yyyy-MM-dd}";
             string query = $"https://financialmodelingprep.com/api/v3/historical-chart/1hour/AAPL?from={date}&apikey={ApiKey}";
@@ -193,7 +192,37 @@ namespace AllStocks.Classes
             return responseList;
         }
 
+        public async Task<List<string>> GetKeyMetrics()
+        {
 
+            List<string> responseList = new List<string>();
+            using (HttpClient httpClient = new HttpClient())
+            {
+                using (HttpRequestMessage request = new HttpRequestMessage(new HttpMethod("GET"),
+                    $"https://financialmodelingprep.com/api/v3/key-metrics-ttm/{Symbol}?limit=40&apikey={ApiKey}"))
+
+                {
+                    request.Headers.TryAddWithoutValidation("Upgrade-Insecure-Requests", "1");
+
+                    HttpResponseMessage response = await httpClient.SendAsync(request);
+                    string body = await response.Content.ReadAsStringAsync();
+
+                    JsonSerializerOptions options = new JsonSerializerOptions
+                    {
+                        AllowTrailingCommas = true
+                    };
+                    using (JsonDocument document = JsonDocument.Parse(body))
+                    {
+                        foreach (JsonElement element in document.RootElement.EnumerateArray())
+                        {
+                            responseList.Add(element.ToString());
+                        }
+                    }
+                }
+            }
+
+            return responseList;
+        }
     }
 
 }

@@ -8,10 +8,223 @@
     xmlns:vms ="clr-namespace:AllStocks.Client.ViewModels"
     xmlns:rxui ="http://reactiveui.net"
     mc:Ignorable="d" 
+    FontFamily="Segoe UI Light"
+    FontWeight="Bold"
     d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            <TextBlock Text="Company Info"
-                       FontSize="100"
-                       />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="AliceBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBox 
+                x:Name="SearchTextBox"
+                MinWidth="200"
+                MaxWidth="300"
+                HorizontalAlignment="Left"
+                Opacity="0.4"
+                FontSize="15"/>
+            <!--Button
+                Content="Start"
+                x:Name="ButtonSendMessage"
+            /-->
+
+            <Border Grid.Row="1" BorderBrush="Black"   
+                    BorderThickness="1">
+                <ListBox x:Name="SearchResultListBox"
+                         HorizontalAlignment="Stretch"
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                         KeyUp="SearchResultListBox_OnKeyUp"/>
+            </Border>
+        </Grid>
+
+        <Grid Grid.Row="1" Background="AliceBlue">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="0.3*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock
+                Grid.Row="0"
+                Grid.ColumnSpan="3"
+                HorizontalAlignment="Left"
+                x:Name="CompanyNameTextBlock"
+                Text="Apple"
+                FontSize="40"
+                Margin="30, 5,10,30" FontFamily="Segoe UI Semilight"/>
+            <TextBlock 
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Рыночная капитализация"
+                HorizontalAlignment="Left"
+                FontSize="16"
+                Margin="10,5,5,5" TextDecorations="{x:Null}"/>
+            <TextBlock 
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="Стоимость предприятия"
+                HorizontalAlignment="Left"
+                FontSize="16"
+                Margin="10,5,5,5"/>
+            <TextBlock 
+                Grid.Row="3"
+                Grid.Column="0"
+                Text="Цена-Прибыль (P/E)"
+                HorizontalAlignment="Left"
+                FontSize="16"
+                Margin="10,5,5,5"/>
+            <TextBlock 
+                Grid.Row="4"
+                Grid.Column="0"
+                Text="Рентабельность с. капитала (ROE)"
+                FontSize="16"
+                Margin="10,5,104,5"/>
+            <TextBlock 
+                Grid.Row="5"
+                Grid.Column="0"
+                Text="Рентабельность капитала (ROIC)"
+                HorizontalAlignment="Left"
+                FontSize="16"
+                Margin="10,5,5,5"/>
+            <TextBlock 
+                Grid.Row="6"
+                Grid.Column="0"
+                Text="Цена-Выручка (P/S)"
+                HorizontalAlignment="Left"
+                FontSize="16"
+                Margin="10,5,5,5"/>
+            <TextBlock 
+                Grid.Row="7"
+                Grid.Column="0"
+                Text="Цена-Балансовая стоимость (P/B)"
+                HorizontalAlignment="Left"
+                FontSize="16"
+                Margin="10,5,5,5"/>
+            <TextBlock 
+                Grid.Row="8"
+                Grid.Column="0"
+                Text="Стоимость компании-Выручка (EV/R)"
+                HorizontalAlignment="Left"
+                FontSize="16"
+                Margin="10,5,5,5"/>
+            <TextBlock 
+                Grid.Row="9"
+                Grid.Column="0"
+                Text="Стоимость компании-EBITDA (EV/EBITDA)"
+                HorizontalAlignment="Left"
+                FontSize="16"
+                Margin="10,5,5,5"/>
+
+            <!--Values-->
+
+            <TextBlock 
+                Grid.Row="1"
+                Grid.Column="0"
+                x:Name="MarketCapValue"
+                Text="0"
+                HorizontalAlignment="Right"
+                FontSize="16"
+                Margin="10,5,10,5"/>
+
+            <TextBlock 
+                Grid.Row="2"
+                Grid.Column="0"
+                x:Name="EnterpriseValue"
+                Text="0"
+                HorizontalAlignment="Right"
+                FontSize="16"
+                Margin="10,5,10,5"/>
+
+            <TextBlock 
+                Grid.Row="3"
+                Grid.Column="0"
+                x:Name="PERatio"
+                Text="0"
+                HorizontalAlignment="Right"
+                FontSize="16"
+                Margin="10,5,10,5"/>
+
+            <TextBlock 
+                Grid.Row="4"
+                Grid.Column="0"
+                x:Name="ROERatio"
+                Text="0"
+                HorizontalAlignment="Right"
+                FontSize="16"
+                Margin="10,5,10,5"/>
+
+            <TextBlock 
+                Grid.Row="5"
+                Grid.Column="0"
+                x:Name="ROICRatio"
+                Text="0"
+                HorizontalAlignment="Right"
+                FontSize="16"
+                Margin="10,5,10,5"/>
+
+            <TextBlock 
+                Grid.Row="6"
+                Grid.Column="0"
+                x:Name="PtoS"
+                Text="0"
+                HorizontalAlignment="Right"
+                FontSize="16"
+                Margin="10,5,10,5"/>
+
+            <TextBlock 
+                Grid.Row="7"
+                Grid.Column="0"
+                x:Name="PtoB"
+                Text="0"
+                HorizontalAlignment="Right"
+                FontSize="16"
+                Margin="10,5,10,5"/>
+
+            <TextBlock 
+                Grid.Row="8"
+                Grid.Column="0"
+                x:Name="EVtoR"
+                Text="0"
+                HorizontalAlignment="Right"
+                FontSize="16"
+                Margin="10,5,10,5"/>
+
+            <TextBlock 
+                Grid.Row="9"
+                Grid.Column="0"
+                x:Name="EVtoEbitda"
+                Text="0"
+                HorizontalAlignment="Right"
+                FontSize="16"
+                Margin="10,5,10,5"/>
+
+
+
+            <!--TextBox 
+                     x:Name="OutputBox"
+                     Text="Fuuuuuck"
+                     FontSize="10"
+                     Width="auto"
+                     Height="auto"/-->
+        </Grid>
     </Grid>
 </rxui:ReactiveUserControl>

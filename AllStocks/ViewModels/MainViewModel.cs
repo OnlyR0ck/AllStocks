@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Reactive;
 using System.Reflection;
+using System.Threading;
 using System.Windows.Input;
+using AllStocks.Classes;
+using AllStocks.Interfaces;
 using AllStocks.Views;
 using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
@@ -14,6 +17,8 @@ namespace AllStocks.ViewModels
 
         [Reactive]
         public RoutingState Router { get; set; }
+
+        public IServer Server { get; }
 
 
         public ReactiveCommand<Unit, Unit> GoToParamsView { get; set; }
@@ -38,6 +43,9 @@ namespace AllStocks.ViewModels
             StatViewModel = new StatViewModel();
 
             Locator.CurrentMutable.RegisterViewsForViewModels(Assembly.GetCallingAssembly());
+            Locator.CurrentMutable.Register(() => new AsynchronousSocketListener("127.0.0.1", 12347), typeof(IServer));
+
+            Server = Locator.Current.GetService<IServer>();
 
 
            /* Locator.CurrentMutable.Register(() => new ServerParamsView(), typeof(IViewFor<ServerParamsViewModel>));
@@ -46,29 +54,21 @@ namespace AllStocks.ViewModels
 
             Router.Navigate.Execute(ServerParamsViewModel);
 
+            CommandsInit();
 
-
-            GoToParamsView = ReactiveCommand.Create(() =>
-            {
-                Router.Navigate.Execute(ServerParamsViewModel);
-            });
-
-            GoToLogView = ReactiveCommand.Create(() =>
-            {
-                Router.Navigate.Execute(LoggerViewModel);
-            });
-
-            GoToDataBaseView = ReactiveCommand.Create(() =>
-            {
-                Router.Navigate.Execute(DatabaseViewModel);
-            });
-
-            GoToStatView = ReactiveCommand.Create(() =>
-            {
-                Router.Navigate.Execute(StatViewModel);
-            });
-
+            Thread serverThread = new Thread(Server.StartServer);
+            serverThread.Start();
         }
 
+        private void CommandsInit()
+        {
+            GoToParamsView = ReactiveCommand.Create(() => { Router.Navigate.Execute(ServerParamsViewModel); });
+
+            GoToLogView = ReactiveCommand.Create(() => { Router.Navigate.Execute(LoggerViewModel); });
+
+            GoToDataBaseView = ReactiveCommand.Create(() => { Router.Navigate.Execute(DatabaseViewModel); });
+
+            GoToStatView = ReactiveCommand.Create(() => { Router.Navigate.Execute(StatViewModel); });
+        }
     }
 }
